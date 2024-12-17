@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 
-namespace YourApp.Controllers
+namespace BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
