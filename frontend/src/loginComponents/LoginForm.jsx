@@ -11,7 +11,7 @@ function LoginForm() {
   const getLocalIp = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.1.74:5070/api/auth/get-ip"
+        "http://10.103.4.180:5070/api/auth/get-ip"
       );
       return response.data.ip;
     } catch (error) {
@@ -24,7 +24,6 @@ function LoginForm() {
     e.preventDefault();
     const localIp = await getLocalIp();
     localStorage.setItem("localIp", localIp);
-    window.alert(localStorage.getItem("localIp"));
     try {
       const response = await axios.post(
         `http://${localStorage.getItem("localIp")}:5070/api/auth/login`,

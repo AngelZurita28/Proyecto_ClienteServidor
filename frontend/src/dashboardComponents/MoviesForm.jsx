@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import LikeButton from "./LikeButton";
+// import image from "../assets/portrait_uncanny.jpg";
 
 export default function MoviesForm() {
   const API_URL = "https://api.themoviedb.org/3";
   const API_KEY = "b2797cf10c3438c91e2d495177d040e8";
   const IMAGE_PATH = "https://image.tmdb.org/t/p/w342";
+  const IMAGE_DEFAULT = ".";
 
   const [movies, setMovies] = useState([]);
   const [searchKey, setSearchKey] = useState("");
@@ -82,6 +84,7 @@ export default function MoviesForm() {
                 src={`${IMAGE_PATH + movie.poster_path}`}
                 alt={movie.title}
                 className="w-full h-auto object-cover"
+                onError={(e) => (e.target.src = "/src/assets/image.jpg")} // Cambia a la imagen por defecto si no carga
               />
               <div className="p-4 text-center">
                 <h4 className="text-lg font-semibold text-white mb-2">

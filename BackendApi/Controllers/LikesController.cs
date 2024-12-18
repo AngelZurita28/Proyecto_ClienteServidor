@@ -251,7 +251,7 @@ namespace BackendApi.Controllers
                         }
                     }
                     
-
+                    Console.WriteLine("se hara insercion al usuario");
                     // Insertar o actualizar en UsercharacterLikes
                     var insertLikeCmd = new MySqlCommand(
                         @"INSERT INTO UsercharacterLikes (user_id, character_id, character_name, action)

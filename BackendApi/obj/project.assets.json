@@ -4294,19 +4294,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Angel Zurita\\.nuget\\packages\\": {}
+    "C:\\Users\\zurita\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Angel Zurita\\Documents\\Proyecto_ClienteServidor\\BackendApi\\BackendApi.csproj",
+      "projectUniqueName": "C:\\Users\\zurita\\Documents\\Progra\\Proyecto_ClienteServidor\\BackendApi\\BackendApi.csproj",
       "projectName": "BackendApi",
-      "projectPath": "C:\\Users\\Angel Zurita\\Documents\\Proyecto_ClienteServidor\\BackendApi\\BackendApi.csproj",
-      "packagesPath": "C:\\Users\\Angel Zurita\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Angel Zurita\\Documents\\Proyecto_ClienteServidor\\BackendApi\\obj\\",
+      "projectPath": "C:\\Users\\zurita\\Documents\\Progra\\Proyecto_ClienteServidor\\BackendApi\\BackendApi.csproj",
+      "packagesPath": "C:\\Users\\zurita\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zurita\\Documents\\Progra\\Proyecto_ClienteServidor\\BackendApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Angel Zurita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\zurita\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4386,7 +4386,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
