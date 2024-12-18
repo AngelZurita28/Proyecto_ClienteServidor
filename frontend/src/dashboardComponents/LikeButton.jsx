@@ -11,7 +11,6 @@ function LikeButton({ itemId, itemType, itemName, itsliked }) {
 
   const handleLike = async () => {
     let action = 1;
-    window.alert("El nombre es" + itemName + "  Y el id es: " + itemId);
     if (!userEmail) {
       alert("Por favor, inicia sesión para dar me gusta.");
       return;
@@ -20,12 +19,10 @@ function LikeButton({ itemId, itemType, itemName, itsliked }) {
     if (liked) {
       action = -1;
     }
-    window.alert(action);
     const apiUrl =
       itemType === "movie"
         ? "http://localhost:5070/api/likes/movie"
         : "http://localhost:5070/api/likes/marvel"; // Cambia la URL según corresponda
-    window.alert(apiUrl);
     try {
       // Aquí pasamos el movieName (nombre de la película) en el cuerpo de la solicitud
       const response = await axios.post(apiUrl, {
@@ -37,7 +34,6 @@ function LikeButton({ itemId, itemType, itemName, itsliked }) {
 
       if (response.status === 200) {
         setLiked(!liked);
-        alert(`Te ha gustado: ${itemName}`);
       }
     } catch (error) {
       console.error("Error al dar me gusta:", error);

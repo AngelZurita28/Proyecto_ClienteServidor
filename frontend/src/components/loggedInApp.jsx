@@ -19,13 +19,13 @@ export function LoggedInApp() {
       {/* Encabezado */}
       <div className="container mx-auto px-4 flex justify-between items-center mb-8">
         {/* Sección de Movies y Characters */}
-        <div className="relative flex w-1/2 bg-gray-800 rounded-full">
+        <div className="relative flex w-1/3 bg-gray-800 rounded-full">
           <button
             onClick={() => setActiveForm("movies")}
-            className={`relative z-10 flex items-center justify-center w-1/2 py-2 text-sm font-medium ${
+            className={`relative z-10 flex items-center justify-center w-1/2 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
               activeForm === "movies"
-                ? "text-white"
-                : "text-gray-400 hover:text-gray-200"
+                ? "bg-blue-500 text-white"
+                : "bg-gray-600 text-gray-400 hover:bg-gray-700"
             }`}
           >
             <FilmIcon className="w-5 h-5 mr-2" />
@@ -33,10 +33,10 @@ export function LoggedInApp() {
           </button>
           <button
             onClick={() => setActiveForm("marvel")}
-            className={`relative z-10 flex items-center justify-center w-1/2 py-2 text-sm font-medium ${
+            className={`relative z-10 flex items-center justify-center w-1/2 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
               activeForm === "marvel"
-                ? "text-white"
-                : "text-gray-400 hover:text-gray-200"
+                ? "bg-blue-500 text-white"
+                : "bg-gray-600 text-gray-400 hover:bg-gray-700"
             }`}
           >
             <UserIcon className="w-5 h-5 mr-2" />
@@ -45,13 +45,13 @@ export function LoggedInApp() {
         </div>
 
         {/* Sección de Liked Characters y Liked Movies */}
-        <div className="relative flex w-1/2 bg-gray-800 rounded-full">
+        <div className="relative flex w-1/3 bg-gray-800 rounded-full">
           <button
             onClick={() => setActiveForm("liked_characters")}
-            className={`relative z-10 flex items-center justify-center w-1/2 py-2 text-sm font-medium ${
+            className={`relative z-10 flex items-center justify-center w-1/2 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
               activeForm === "liked_characters"
-                ? "text-white"
-                : "text-gray-400 hover:text-gray-200"
+                ? "bg-red-500 text-white"
+                : "bg-gray-600 text-gray-400 hover:bg-gray-700"
             }`}
           >
             <HeartIcon className="w-5 h-5 mr-2" />
@@ -59,10 +59,10 @@ export function LoggedInApp() {
           </button>
           <button
             onClick={() => setActiveForm("liked_movies")}
-            className={`relative z-10 flex items-center justify-center w-1/2 py-2 text-sm font-medium ${
+            className={`relative z-10 flex items-center justify-center w-1/2 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
               activeForm === "liked_movies"
-                ? "text-white"
-                : "text-gray-400 hover:text-gray-200"
+                ? "bg-red-500 text-white"
+                : "bg-gray-600 text-gray-400 hover:bg-gray-700"
             }`}
           >
             <HeartIcon className="w-5 h-5 mr-2" />
@@ -70,7 +70,7 @@ export function LoggedInApp() {
           </button>
         </div>
 
-        {/* Botón de cerrar sesión */}
+        {/* Botón de cerrar sesión (al final, alineado a la derecha) */}
         <button
           onClick={handleLogout}
           className="px-4 py-2 text-sm font-semibold bg-red-600 text-white rounded-lg shadow-md transition-all duration-300 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
