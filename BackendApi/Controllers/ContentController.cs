@@ -1,26 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using BackendApi.Models;
 using System.Data;
 
 namespace BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MoviesController : ControllerBase
+    public class ContentController : ControllerBase
     {
         // Cadena de conexión a MySQL
         private readonly string connectionString = "Server=localhost;Database=practica;User=root;Password=181117;";
 
         // Modelo para la película
-        public class Movie
-        {
-            public int MovieId { get; set; }
-            public string MovieName { get; set; }
-            public int LikeCount { get; set; }
-        }
 
         // GET api/movies/{id}
-        [HttpGet("{id}")]
+        [HttpGet("movie/{id}")]
         public IActionResult GetMovie(int id)
         {
             Movie movie = null;

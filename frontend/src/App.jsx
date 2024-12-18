@@ -1,36 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import "./index.css";
-// import { BrowserRouter as Router } from "react-router-dom";
-// import { LoggedInApp } from "./components/loggedInApp";
-// import { LoggedOutApp } from "./components/loggedOutApp";
-
-// function App() {
-// const [isLoggedIn, setIsLoggedIn] = useState();
-
-// const check = () => {
-//   if (
-//     localStorage.getItem("userEmail") &&
-//     localStorage.getItem("userEmail").length > 2
-//   ) {
-//     window.alert(localStorage.getItem("userEmail"));
-//     return true;
-//   }
-//   return false;
-// };
-
-// const handleCleanStorage = () => {
-//   localStorage.clear();
-//   window.location.reload();
-// };
-
-// return (
-//   <Router>
-//     {check() ? <LoggedInApp /> : <LoggedOutApp />}
-//     <button onClick={handleCleanStorage} className="button button-primary">
-//       {"borrar localstorage "}
-//     </button>
-//   </Router>
-// );
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginForm from "./loginComponents/LoginForm";
@@ -39,8 +6,8 @@ import Dashboard from "./loginComponents/Dashboard";
 import ForgotPassword from "./loginComponents/ForgotPassword";
 import VerifyOTP from "./loginComponents/VerifyOTP";
 import ResetPassword from "./loginComponents/ResetPassword";
-import { LoggedOutApp } from "./components/loggedOutApp";
 import { LoggedInApp } from "./components/loggedInApp";
+import LikedCharacters from "./dashboardComponents/LikedCharactersForm";
 
 function App() {
   const check = () => {
@@ -52,11 +19,6 @@ function App() {
       return true;
     }
     return false;
-  };
-
-  const handleCleanStorage = () => {
-    localStorage.clear();
-    window.location.reload();
   };
 
   return (
@@ -73,12 +35,11 @@ function App() {
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/verify-otp" element={<VerifyOTP />} />
               <Route path="/reset-password" element={<ResetPassword />} />
+              <Route path="/likedcharacters" element={<LikedCharacters />} />
             </Routes>
           </div>
         </Router>
       )}
-
-      <button onClick={handleCleanStorage}> limpiar storage</button>
     </>
   );
 }
