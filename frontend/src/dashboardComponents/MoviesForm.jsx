@@ -63,7 +63,7 @@ export default function MoviesForm() {
             type="text"
             placeholder="Buscar película"
             onChange={(e) => setSearchKey(e.target.value)}
-            className="w-full max-w-md p-2 rounded-l-lg bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500"
+            className="w-full max-w-md p-2 rounded-l-lg bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:rieng-red-500"
           />
           <button
             type="submit"
